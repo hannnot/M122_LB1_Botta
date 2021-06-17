@@ -6,22 +6,22 @@
 3. Clonen Sie das Projekt aus folgendem Repo:
     * https://github.com/hannnot/M122_LB1_Botta.git
 4. Erstellen Sie eine config.ini Datei wie folgt:
-[EMAILFILE]<br>
-path = path_to_your_mail_txt_file/mail.txt
+    [EMAILFILE]<br>
+    path = path_to_your_mail_txt_file/mail.txt
 
-[ATTACHMENTFILE]<br>
-path = path_to_your_pdf_file/attachment.pdf
+    [ATTACHMENTFILE]<br>
+    path = path_to_your_pdf_file/attachment.pdf
 
-[OUTPUTFILE]<br>
-path = C:\Users\path_to_your_output_folder
+    [OUTPUTFILE]<br>
+    path = C:\Users\path_to_your_output_folder
 
-[GMAILCONFIG]<br>
-email = you@gmail.com<br>
-pwd = yourpassword
+    [GMAILCONFIG]<br>
+    email = you@gmail.com<br>
+    pwd = yourpassword
 
-Beachten Sie dass sie eine Gmail Adresse als Absenderadresse verwenden müssen<br>
-Erstellen Sie ein App-Passwort nach folgendem Link<br>
-https://support.google.com/accounts/answer/185833?hl=de&ref_topic=7189145
+    Beachten Sie dass sie eine Gmail Adresse als Absenderadresse verwenden müssen<br>
+    Erstellen Sie ein App-Passwort nach folgendem Link<br>
+    https://support.google.com/accounts/answer/185833?hl=de&ref_topic=7189145
 
 5. Überprüfen Sie Ihren Computer auf eine vorhandene Python installation in dem sie nachfolgenden Befehl in ein Windows Terminal eingeben: python
 
