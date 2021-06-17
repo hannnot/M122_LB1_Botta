@@ -6,14 +6,17 @@ from email.mime.base import MIMEBase
 from email import encoders
 from datetime import datetime
 
+
+# This function sends an E-Mail to the E-Mail adress which was created in the .txt file before
 def sendEmail(config: ConfigParser, receiver_address: str):
-    mail_content = '''Hello,
-    This is a simple mail. There is only text, no attachments are there The mail is sent using Python SMTP library.
-    Thank You
-    '''
-    #The mail addresses and password
+    
+    # The sending mail address and password from the config file
     sender_address = config['GMAILCONFIG']['email']
     sender_pass = config['GMAILCONFIG']['pwd']
+
+    mail_content = '''Hallo,
+    Dieses Mail wurde im Rahmen des Moduls 122 gesendet
+    '''
     
     #Setup the MIME
     message = MIMEMultipart()
@@ -23,6 +26,7 @@ def sendEmail(config: ConfigParser, receiver_address: str):
 
     message.attach(MIMEText(mail_content, 'plain'))
 
+    #pdf file from the config file
     pdfname = config['ATTACHMENTFILE']['path']
     
     # open the file in bynary
@@ -47,10 +51,12 @@ def sendEmail(config: ConfigParser, receiver_address: str):
     session.quit()
     print('Mail Sent')
 
+#This function reads and returns the E-Mail which is written in the .txt file
 def openEmail(config: ConfigParser):
     email = open(config['EMAILFILE']['path'], "r").read()
     return email
 
+#This function creates a new .txt file in the folder which is set in the config file.
 def createOutput(config: ConfigParser, receiver_address: str):
     timestamp = datetime.now()
     fileName = timestamp.strftime("%d%m%Y%H%M%S.txt")
