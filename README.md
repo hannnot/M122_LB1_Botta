@@ -35,7 +35,8 @@
 
     - öffnen Sie ein Windows Terminal im Ordner des geclonten Projekts und geben Sie folgenden Befehl ein:
     python main.py
-    falls nicht:
+    
+falls nicht:
 
     - öffnen Sie einen Windwos Explorer und navigieren Sie in den Installationsordner von Python, kopieren Sie den Pfad (incl. \python.exe)
     öffnen Sie ein Windows Terminal im Ordner des geclonten Projekts und geben Sie folgenden Befehl ein:
